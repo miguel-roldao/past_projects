@@ -1,0 +1,8 @@
+#include "TCanvas.h"
+#include "TH1F.h"
+#include "TGraph.h"
+#include "TFormula.h"
+#include "TStyle.h"
+#include "TApplication.h"
+#include "TF1.h"
+#include "TRandom3.h"
