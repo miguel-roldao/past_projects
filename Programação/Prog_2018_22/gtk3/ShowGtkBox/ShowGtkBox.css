@@ -1,0 +1,145 @@
+
+@define-color colorOptionsLabels DarkCyan;
+@define-color colorFrames DarkRed;
+@define-color colorLabelSource Black;
+@define-color colorLabelHeader DarkBlue;
+
+#window {background-color: Wheat;}
+
+.FrameOptionsHeader {
+    background-color: Beige;
+    color: @colorOptionsLabels;
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight: bold;
+    border-width: 2px;
+    border-color: DarkRed;
+}
+
+.FrameOptions {
+    background-color: Beige;
+    color: @colorOptionsLabels;
+    font-family: Tahoma;
+    font-size: 9px;
+    border-width: 2px;
+    border-color: DarkRed;
+}
+
+.FrameOptions2 {
+    background-color: Beige;
+    color: @colorOptionsLabels;
+    font-family: Tahoma;
+    font-size: 9px;
+    border-width: 2px;
+    border-color: DarkRed;
+}
+
+.FrameBox {
+    background-color: Beige;
+    color: @colorOptionsLabels;
+    font-family: Tahoma;
+    font-size: 9px;
+    border-width: 2px;
+    border-color: DarkRed;
+}
+
+.Separator1 {
+    color: DarkRed;
+}
+
+.LabelHeader {
+    color: @colorLabelHeader;
+    font-family: Tahoma;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.LabelOptions {
+    background-color: Beige;
+    color: @colorOptionsLabels;
+    font-family: Tahoma;
+    font-size: 9px;
+}
+
+.LabelSource {
+    background-color: Beige;
+    color: @colorLabelSource;
+    font-family: Tahoma;
+    font-size: 11px;
+}
+
+.ButtonOptions {
+    background-color: Beige;
+    color: @colorOptionsLabels;
+    font-family: Tahoma;
+    font-size: 9px;
+}
+
+.ButtonOptionsActions {
+    background-color: Beige;
+    color: @colorOptionsLabels;
+    font-family: Tahoma;
+    font-size: 9px;
+}
+
+.ButtonExit {
+    padding: 0px;
+    border-color: DarkRed;
+}
+
+#btExitLabel {
+    border-color: DarkRed;
+    background-color: Beige;
+    color: @colorOptionsLabels;
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#TestYesNo {
+    color: @colorOptionsLabels;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.DialogExitLabel {
+    color: @colorOptionsLabels;
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.DialogAboutHeaderLabel {
+    color: DarkBlue;
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.DialogAboutLabel {
+    color: DarkBlue;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.ComboBoxOptions {
+    color: @colorOptionsLabels;
+    font-family: Tahoma;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+#SpinButton {
+    background-color: Beige;
+    color: @colorOptionsLabels;
+    font-family: Tahoma;
+    font-size: 9px;
+}
+
+#SpinButton .button {
+    border-width: 1px 5px 1px 2px;
+    color: @colorOptionsLabels;
+}
+

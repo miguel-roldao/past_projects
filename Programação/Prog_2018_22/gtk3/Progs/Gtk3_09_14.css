@@ -1,0 +1,66 @@
+@define-color color1 #ab0567;
+
+window {
+    background-color: Wheat1;
+}
+
+.label_Main {
+    color: @color1;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btminus label {
+    background-color: red;
+    color: cyan;
+    border: 1px solid cyan;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btminus:hover label {
+    background-color: DarkSalmon;
+    color: cyan;
+    border: 1px solid red;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btminus:active label {
+    background-color: cyan;
+    color: red;
+    border: 1px solid red;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btplus label {
+    background-color: blue;
+    color: yellow;
+    border: 1px solid yellow;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btplus:hover label {
+    background-color: SteelBlue3;
+    color: yellow;
+    border: 1px solid blue;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btplus:active label {
+    background-color: yellow;
+    color: blue;
+    border: 1px solid blue;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 18px;
+}

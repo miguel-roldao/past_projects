@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int str_len (char *s1)
+  {
+    int i=0;
+ 
+    while(s1[i] != 0)
+      i++;
+
+    return i;
+  }
+
+char * str_cpy (char *s1, char *s2)
+  {
+    int i;
+    for (i=0; s2[i] != 0; i++)
+   	s1[i] = s2[i];
+
+    return s1;
+  }
+
+char * str_cat (char *s1, char *s2)
+  {
+    int i, j;
+
+    i=0;
+    
+    while(s1[i]!=0)
+      	i++;
+
+    for(j=0; s2[j] != 0; j++, i++)
+     	s1[i] = s2[j];
+      
+    return s1;
+  }
+
+int main (int argc, char **argv)
+  {
+    char *str1, *cpy1, *catenacao;
+    int len1, len2;
+   
+    if (argc != 3)
+      {
+	printf ("\n *Erro* Introduza duas strings como argumentos.\n"); 
+	return 1;
+      }
+    
+    printf("\n  A primeira string que introduziu foi: '%s'.\n\n", argv[1]);
+    printf("\n  A segunda string que introduziu foi: '%s'.\n\n", argv[2]);
+
+    len1 = str_len (argv[1]);
+    len2 = str_len (argv[2]);
+    
+    printf("\n  A primeira string que inseriu tem %d caracteres\n\n", len1);
+    printf("\n  A segunda string que inseriu tem %d caracteres\n\n", len2);
+
+    cpy1 = (char*) malloc((len1 + 1)*sizeof(char));
+   
+    catenacao = (char*) malloc((len1 + len2 + 1)*sizeof(char));
+    
+    str_cpy (cpy1, argv[1]);  // cópia do argv[1] mas está a ter caracteres extra.
+   
+    // str1 = str_cpy (argv[1], argv[2]);
+
+    printf("\n  Cópia da primeira string: '%s'\n\n", cpy1);
+
+    catenacao = str_cat (cpy1, argv[2]); // falha de segmentação
+    
+    printf("\n  As duas strings juntas: '%s'.\n\n", catenacao);
+    
+    return 0;
+  }

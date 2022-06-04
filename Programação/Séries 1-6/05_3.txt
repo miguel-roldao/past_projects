@@ -1,0 +1,55 @@
+#INCLUDE <STDIO.H>
+#INCLUDE <STRING.H>
+
+INT MAIN(INT ARGC, CHAR **ARGV)
+  {
+    INT I;
+    CHAR V[1000]; 
+    FILE *F1, *F2;
+    
+    IF(ARGC != 4)
+      {
+	PRINTF("./PROGRAMA <M2M/M2M> <FILE_DE_LEITURA> <FILE_DE_ESCRITA>\N\N");
+	RETURN 1;
+      }
+    
+    F1 = FOPEN(ARGV[2], "RT");  //TESTAR ABERTURA DO FICHEIRO
+
+    F2 = FOPEN(ARGV[3], "WT");
+
+    IF (STRCMP(ARGV[1], "M2M")==0)
+      {
+	WHILE (FGETS(V, 1000, F1)!=NULL)
+	  {
+	    //	PRINTF("PUTA-");
+	
+	    FOR(I=0; V[I] != 0; I++)
+	      {
+		IF (V[I] > 64 && V[I] < 91)
+		  V[I] = V[I] + 32;
+	      }
+
+	    FPRINTF(F2, "%S", V);
+	  }
+      }
+    IF(STRCMP(ARGV[1], "M2M")==0)
+      {
+	WHILE (FGETS(V, 1000, F1)!=NULL)
+	{
+	  //	PRINTF("CABRA");
+	
+	  FOR(I=0; V[I]!=0; I++)
+	    {
+	      IF (V[I] > 96 && V[I] < 122)
+		V[I] = V[I] - 32;
+	    }
+
+	  FPRINTF(F2, "%S", V);
+	}
+      }
+    
+    FCLOSE(F1);
+    FCLOSE(F2);
+    RETURN 0;
+    
+  }
